@@ -18,7 +18,7 @@ export class AddTeacherComponent implements OnInit {
 
   public addUser(): void{
     console.log(this.user);
-    this.user.isActive = true;
+    this.user.status = true;
     this.user.type = "TEACHER";
     this.userService.addUser(this.user).subscribe(result=>
       { console.log("added");

@@ -17,7 +17,7 @@ export class ClassUnitService {
   }
 
   public getClassUnit(id: Number): Observable<ClassUnitData> {
-    return this.httpClient.get<ClassUnitData>(this.url + 'getClassUnit/' + id);
+    return this.httpClient.get<ClassUnitData>(this.url + '/getClassUnit/' + id);
   }
 
   public updateClassUnit(classUnit: ClassUnitData): Observable<any> {
