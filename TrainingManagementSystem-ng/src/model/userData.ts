@@ -9,6 +9,6 @@ export class UserData {
     firstName: string;
     lastName: string;
     isActive: boolean;
-    participantRegistration: ParticipantRegistrationData;
-    userNotification: UserNotificationData;
+    participantRegistrationDto: ParticipantRegistrationData;
+    userNotificationDto: UserNotificationData;
 }

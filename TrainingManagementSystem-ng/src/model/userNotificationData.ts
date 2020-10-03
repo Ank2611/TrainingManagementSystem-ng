@@ -3,7 +3,7 @@ import { UserData } from './userData';
 
 export class UserNotificationData{
     id: number;
-    readNotificationList: NotificationData[];
-    unreadNotificationList: NotificationData[];
+    readNotificationDtoList: NotificationData[];
+    unreadNotificationDtoList: NotificationData[];
     user: UserData;
 }

@@ -5,6 +5,6 @@ export class ClassesData{
     id: number;
     name: string;
     date: Date;
-    classUnit: ClassUnitData;
-    notifications: NotificationData[];
+    classUnitDto: ClassUnitData;
+    notificationDtoList: NotificationData[];
 }

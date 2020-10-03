@@ -4,6 +4,6 @@ import {  ParticipantRegistrationData } from './participantRegistrationData';
 export class CourseData{
     id: number;
     name: string;
-    classUnitList: ClassUnitData[];
-    participantRegistration: ParticipantRegistrationData;
+    classUnitDtoList: ClassUnitData[];
+    participantRegistrationDto: ParticipantRegistrationData;
 }

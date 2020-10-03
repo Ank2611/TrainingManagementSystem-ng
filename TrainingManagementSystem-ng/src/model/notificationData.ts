@@ -5,7 +5,7 @@ export class NotificationData{
     id: number;
     subject: string;
     contents: string;
-    classesList: ClassesData[];
-    readUserNotification: UserNotificationData[];
-    unreadUserNotification: UserNotificationData[];
+    classesDtos: ClassesData[];
+    userNotificationDtoList: UserNotificationData[];
+    userNotificationDtoList1: UserNotificationData[];
 }
