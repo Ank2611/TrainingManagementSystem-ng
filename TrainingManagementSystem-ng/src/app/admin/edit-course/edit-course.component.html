@@ -1,0 +1,13 @@
+<h2>Update course details</h2>
+
+<div class="form-add">
+    <form >
+        <mat-form-field appearance="fill">
+            <mat-label>Course name</mat-label>
+            <input matInput placeholder="coursename" type="text" [(ngModel)]="course.name" name="coursename">
+        </mat-form-field>
+        <br>
+
+        <button mat-raised-button (click)="updateCourse()">Update</button>
+    </form>
+</div>

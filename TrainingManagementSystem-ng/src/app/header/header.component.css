@@ -1,0 +1,35 @@
+span{
+    padding: 12px;
+    font-size: 25px;
+    font-weight: bold;
+    color: azure;
+    float: left;
+}
+.navbar {
+    width: 100%;
+    background-color: #009999;
+    overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  /* Current/active navbar link */
+  .active {
+    background-color: #4CAF50;
+  }
+  .navbar-right{
+      float: right;
+  }

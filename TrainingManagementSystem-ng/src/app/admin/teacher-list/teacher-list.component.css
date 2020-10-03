@@ -1,9 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
-
-
+h1{
+    text-align: center;
+    padding-top: 15px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
 
 table {
     width: 80%;
@@ -27,7 +28,8 @@ table {
     color: white;
   }
 
-  
   .btn-add{
+    margin-left: 80px;
     background-color: lightgreen;
   }
+

@@ -1,0 +1,37 @@
+
+<h1>ClassUnit List</h1>
+<div class="container" style="margin-top:70px">
+<table class="mat-table">
+<thead>
+    <tr>
+        <th>Name</th>
+        <th colspan="4"></th>
+    </tr>
+   
+</thead>
+<tbody>
+    <tr *ngFor="let classUnit of classUnitList">
+        <td>{{classUnit.name}}</td>
+        <td><button mat-raised-button>Show details</button></td>
+        <td><button routerLink="/edit-class-unit/{{classUnit.id}}" mat-raised-button>Edit</button></td>
+        <td><button (click)="delete(classUnit.id)" mat-raised-button>Delete</button></td>
+        <td><button mat-raised-button>Asign classes</button></td>
+    </tr>
+</tbody>
+</table>
+<br>
+
+<button class="btn-add" mat-raised-button (click)="showForm()">Create new class unit</button>
+</div>
+
+<div class="form-add">
+    <form *ngIf="isFormVisible">
+        <mat-form-field appearance="fill">
+            <mat-label>Class Unit name</mat-label>
+            <input matInput placeholder="class unit name" type="text" [(ngModel)]="classUnit.name" name="classunitname">
+        </mat-form-field>
+        <br>
+
+        <button mat-raised-button (click)="addClassUnit()">Save</button>
+    </form>
+</div>

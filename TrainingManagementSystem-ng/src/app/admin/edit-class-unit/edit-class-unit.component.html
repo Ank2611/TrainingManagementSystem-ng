@@ -1,0 +1,13 @@
+<h2>Update class unit details</h2>
+
+<div class="form-add">
+    <form >
+        <mat-form-field appearance="fill">
+            <mat-label>Class unit name</mat-label>
+            <input matInput placeholder="class unit name" type="text" [(ngModel)]="classUnit.name" name="classUnitname">
+        </mat-form-field>
+        <br>
+
+        <button mat-raised-button (click)="updateClassUnit()">Update</button>
+    </form>
+</div>
