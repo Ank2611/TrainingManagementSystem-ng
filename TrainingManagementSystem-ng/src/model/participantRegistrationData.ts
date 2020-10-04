@@ -5,6 +5,6 @@ export class ParticipantRegistrationData{
     id: number;
     date: Date;
     userDto: UserData;
-    CourseDto: CourseData;
+    courseDto: CourseData;
     accepted: boolean;
 }

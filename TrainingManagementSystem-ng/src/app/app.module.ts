@@ -19,7 +19,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatPaginatorModule } from "@angular/material/paginator";
-
+import { MatRadioModule } from "@angular/material/radio";
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { TeacherListComponent } from './admin/teacher-list/teacher-list.component';
@@ -29,6 +29,9 @@ import { CourseListComponent } from './admin/course-list/course-list.component';
 import { EditCourseComponent } from './admin/edit-course/edit-course.component';
 import { ClassUnitListComponent } from './admin/class-unit-list/class-unit-list.component';
 import { EditClassUnitComponent } from './admin/edit-class-unit/edit-class-unit.component';
+import { EditUserComponent } from './admin/edit-user/edit-user.component';
+import { RegistrationListComponent } from './admin/registration-list/registration-list.component';
+import { AddRegistrationComponent } from './add-registration/add-registration.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { EditClassUnitComponent } from './admin/edit-class-unit/edit-class-unit.
     CourseListComponent,
     EditCourseComponent,
     ClassUnitListComponent,
-    EditClassUnitComponent
+    EditClassUnitComponent,
+    EditUserComponent,
+    RegistrationListComponent,
+    AddRegistrationComponent
 
   ],
   imports: [
@@ -62,7 +68,8 @@ import { EditClassUnitComponent } from './admin/edit-class-unit/edit-class-unit.
     MatListModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

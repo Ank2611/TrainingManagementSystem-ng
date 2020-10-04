@@ -1,0 +1,35 @@
+<div>
+<h2>Edit</h2>
+<div class="form-add">
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="firstname" type="text" [(ngModel)]="user.firstName" name="firstName">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="lastname" type="text" [(ngModel)]="user.lastName" name="lastName">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>UserName</mat-label>
+            <input matInput placeholder="username" type="text" [(ngModel)]="user.userName" name="userName">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" type="password" [(ngModel)]="user.password" name="password">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <input matInput placeholder="status" type="boolean" [(ngModel)]="user.status" name="status">
+        </mat-form-field>
+        <br><br><br>
+        
+        <button mat-raised-button (click)="updateUser()">Save</button>
+        
+    </form>
+</div>
+</div>

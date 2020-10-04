@@ -22,7 +22,7 @@ export class AddTeacherComponent implements OnInit {
     this.user.type = "TEACHER";
     this.userService.addUser(this.user).subscribe(result=>
       { console.log("added");
-      this.router.navigateByUrl(""); })
+      this.router.navigateByUrl("admin/teacher-list"); })
   }
 }
  

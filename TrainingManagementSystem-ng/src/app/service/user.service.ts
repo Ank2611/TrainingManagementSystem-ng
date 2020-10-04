@@ -23,4 +23,17 @@ export class UserService {
     return this.httpClient.post<any>(this.url + '/addUser', user);
 
   }
+
+  public deleteUser(id: Number) {
+    return this.httpClient.delete<any>(this.url + '/deleteUser/' + id);
+  }
+
+  public getUser(id:Number): Observable<UserData>{
+    return this.httpClient.get<UserData>(this.url+'/getUser/'+id);
+
+  }
+
+  public updateUser(user: UserData): Observable<any>{
+    return this.httpClient.put<any>(this.url+'/updateUser',user);
+  }
 }
