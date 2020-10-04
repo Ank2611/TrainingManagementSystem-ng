@@ -24,5 +24,12 @@ export class AddRegistrationComponent implements OnInit {
 
   }
 
+  onSelectionChange(course) {
+    this.selectedCourse = course;
+}
+
+  addRegister(){
+    console.log(this.course);
+  }
 
 }

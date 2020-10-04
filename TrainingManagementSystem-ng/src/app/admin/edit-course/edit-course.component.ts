@@ -16,7 +16,6 @@ export class EditCourseComponent implements OnInit {
 
   ngOnInit(): void {
     let id = this.activatedRoutes.snapshot.paramMap.get("id");
-    // let id = this.activatedRoutes.snapshot.params["id"];
     console.log('id ' + id);
     this.courseService.getCourse(Number(id)).subscribe(courseResult => {
       this.course = courseResult;

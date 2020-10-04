@@ -9,10 +9,12 @@
         </thead>
         <tbody>
             <tr *ngFor="let course of courses">
-                <td></td>
+                <td><input type="radio" name="radiogroup"  [value]="course.id" (change)="onSelectionChange(course)"></td>
                 <td>{{course.name}}</td>
             </tr>
         </tbody>
     </table>
+    <br>
 
+    <button mat-raised-button (click)="addRegister()">Register</button>
 </div>
