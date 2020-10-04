@@ -14,4 +14,8 @@ export class ParticipantRegistrationService {
     return this.httpClient.get<ParticipantRegistrationData[]>(this.url+'/getParticipantRegistrations');
   }
 
+  public addParticipantRegistration(participant: ParticipantRegistrationData):Observable<any>{
+    return this.httpClient.post<any>(this.url+'/addParticipantRegistration',participant);
+  }
+
 }

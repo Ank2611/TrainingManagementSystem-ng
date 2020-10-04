@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'edit-class-unit/:id', component: EditClassUnitComponent},
   {path:'edit-user/:id', component:EditUserComponent},
   {path:'admin/registration-list', component:RegistrationListComponent},
-  {path:'add-registration', component:AddRegistrationComponent}
+  {path:'add-registration/:id', component:AddRegistrationComponent}
 
 ];
 

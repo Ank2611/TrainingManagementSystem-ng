@@ -20,7 +20,7 @@
                 <td>{{user.status}}</td>
                 <td><button routerLink="/edit-user/{{user.id}}" mat-raised-button>Edit</button></td>
                 <td><button (click)="delete(user.id)" mat-raised-button>Delete</button></td>
-                <td><button routerLink="" mat-raised-button>Asign a course</button></td>
+                <td><button routerLink="/add-registration/{{user.id}}" mat-raised-button>Asign a course</button></td>
             </tr>
         </tbody>
     </table>
