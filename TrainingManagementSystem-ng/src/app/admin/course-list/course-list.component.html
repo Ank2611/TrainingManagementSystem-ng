@@ -1,5 +1,5 @@
 
-<h1>Course List</h1>
+<h1>Courses List</h1>
 <div class="container" style="margin-top:70px">
 <table class="mat-table">
 <thead>
@@ -15,7 +15,7 @@
         <td><button mat-raised-button>Show details</button></td>
         <td><button routerLink="/edit-course/{{course.id}}" mat-raised-button>Edit</button></td>
         <td><button (click)="delete(course.id)" mat-raised-button>Delete</button></td>
-        <td><button mat-raised-button>Asign a ClassUnit</button></td>
+        <td><button routerLink="/class-unit-to-course/{{course.id}}" mat-raised-button>Asign a ClassUnit</button></td>
     </tr>
 </tbody>
 </table>

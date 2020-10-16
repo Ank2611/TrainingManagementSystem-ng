@@ -22,11 +22,12 @@ export class EditClassUnitComponent implements OnInit {
 
   }
 
-  updateClassUnit(){
+  updateClassUnit(): void{
     this.classUnitService.updateClassUnit(this.classUnit).subscribe(result=>{
       this.classUnit=result;
+      this.route.navigateByUrl("admin/class-unit-list");
     })
-    this.route.navigateByUrl("admin/class-unit-list")
+  
   }
 
 }

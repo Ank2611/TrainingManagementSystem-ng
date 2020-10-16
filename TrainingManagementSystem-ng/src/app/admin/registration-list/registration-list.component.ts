@@ -8,15 +8,22 @@ import { ParticipantRegistrationService } from "../../service/participant-regist
 })
 export class RegistrationListComponent implements OnInit {
   participants: ParticipantRegistrationData[] = [];
-  
+
   constructor(private participantRegistrationService: ParticipantRegistrationService) { }
 
   ngOnInit(): void {
-    this.participantRegistrationService.getParticipantRegistrations().subscribe(receivedList=>{
-      this.participants=receivedList;
+    this.participantRegistrationService.getParticipantRegistrations().subscribe(receivedList => {
+      this.participants = receivedList;
     })
   }
 
+  delete(id: Number) {
+    if (confirm("Are you sure you want to delete this?")) {
+      this.participantRegistrationService.deleteParticipantRegistration(id).subscribe(result => {
+        this.ngOnInit();
+      })
+    }
+  }
 
 
 }

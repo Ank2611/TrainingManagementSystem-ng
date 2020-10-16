@@ -25,8 +25,9 @@ export class EditUserComponent implements OnInit {
     console.log(this.user);
     this.userService.updateUser(this.user).subscribe(updUser=>{
       this.user=updUser;
+      this.route.navigateByUrl("admin/teacher-list");
     })
-    this.route.navigateByUrl("admin/teacher-list");
+   
   }
 
 }

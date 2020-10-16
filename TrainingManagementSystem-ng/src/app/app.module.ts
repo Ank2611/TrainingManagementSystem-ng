@@ -18,6 +18,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatListModule } from "@angular/material/list";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDatepickerModule } from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatRadioModule } from "@angular/material/radio";
 import { HeaderComponent } from './header/header.component';
@@ -32,6 +33,14 @@ import { EditClassUnitComponent } from './admin/edit-class-unit/edit-class-unit.
 import { EditUserComponent } from './admin/edit-user/edit-user.component';
 import { RegistrationListComponent } from './admin/registration-list/registration-list.component';
 import { AddRegistrationComponent } from './add-registration/add-registration.component';
+import { ClassUnitToCourseComponent } from './admin/class-unit-to-course/class-unit-to-course.component';
+import { ClassesToClassUnitComponent } from './admin/classes-to-class-unit/classes-to-class-unit.component';
+import { ClassesListComponent } from './admin/classes-list/classes-list.component';
+import { EditClassesComponent } from './admin/edit-classes/edit-classes.component';
+import { TeacherCoursesComponent } from './teacher/teacher-courses/teacher-courses.component';
+import { TeacherComponent } from './teacher/teacher/teacher.component';
+import { ClassUnitByCourseComponent } from './teacher/class-unit-by-course/class-unit-by-course.component';
+import { ClassesByClassUnitComponent } from './teacher/classes-by-class-unit/classes-by-class-unit.component';
 
 
 @NgModule({
@@ -48,7 +57,15 @@ import { AddRegistrationComponent } from './add-registration/add-registration.co
     EditClassUnitComponent,
     EditUserComponent,
     RegistrationListComponent,
-    AddRegistrationComponent
+    AddRegistrationComponent,
+    ClassUnitToCourseComponent,
+    ClassesToClassUnitComponent,
+    ClassesListComponent,
+    EditClassesComponent,
+    TeacherCoursesComponent,
+    TeacherComponent,
+    ClassUnitByCourseComponent,
+    ClassesByClassUnitComponent
 
   ],
   imports: [
@@ -68,6 +85,7 @@ import { AddRegistrationComponent } from './add-registration/add-registration.co
     MatListModule,
     MatFormFieldModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     MatPaginatorModule,
     MatRadioModule
   ],

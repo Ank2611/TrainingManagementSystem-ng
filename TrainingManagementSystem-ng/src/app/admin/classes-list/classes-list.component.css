@@ -1,0 +1,26 @@
+
+.btn-add{
+    margin-left: 80px;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-add{
+    margin-top: 25px;
+    margin-left: 80px;
+    
+}
+
+.sample-full-width {
+    width: 100%;
+  }
+/* 
+.picker{
+    width: auto;
+} */

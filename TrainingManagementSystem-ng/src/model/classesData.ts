@@ -3,7 +3,7 @@ import { NotificationData } from './notificationData';
 
 export class ClassesData{
     id: number;
-    name: string;
+    subject: string;
     date: Date;
     classUnitDto: ClassUnitData;
     notificationDtoList: NotificationData[];

@@ -24,12 +24,16 @@ export class AddRegistrationComponent implements OnInit {
     private route: Router, private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.courseService.getCourses().subscribe(receivedCourses => {
-      this.courses = receivedCourses;
-    })
+    this.loadCourses();
     let idUser = this.activeRoute.snapshot.paramMap.get("id");
     this.userService.getUser(Number(idUser)).subscribe(receivedUser=>{
       this.user=receivedUser;
+    })
+  }
+
+  loadCourses(): void{
+    this.courseService.getCourses().subscribe(receivedCourses => {
+      this.courses = receivedCourses;
     })
   }
 
@@ -38,19 +42,19 @@ export class AddRegistrationComponent implements OnInit {
     console.log(this.selectedCourse);
   }
 
-  addRegister() {
-    console.log(this.selectedCourse);
-    console.log(this.user.id);
+  addRegister():void {
+
     let idUser = this.activeRoute.snapshot.paramMap.get("id");
     this.participant.courseDto.id=this.selectedCourse;
     this.participant.userDto.id=Number(idUser);
-        console.log(this.participant.userDto.id)
+    
     this.participant.date=new Date();
     this.participant.accepted=true;
-    // console.log('user id ' + this.participant.userDto.id);
-    // console.log('course id ' + this.participant.courseDto.id);
+    console.log('user id ' + this.participant.userDto.id);
+    console.log('course id ' + this.participant.courseDto.id);
     this.participantRegistrationService.addParticipantRegistration(this.participant).subscribe(received=>{
-      console.log("added");
+    console.log("added");
+    this.loadCourses();
     })
   }
 

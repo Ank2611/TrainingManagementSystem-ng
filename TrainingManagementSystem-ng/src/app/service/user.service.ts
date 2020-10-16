@@ -36,4 +36,6 @@ export class UserService {
   public updateUser(user: UserData): Observable<any>{
     return this.httpClient.put<any>(this.url+'/updateUser',user);
   }
+
+ 
 }

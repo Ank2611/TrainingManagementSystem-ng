@@ -31,4 +31,14 @@ export class ClassUnitService {
   public addClassUnit(classUnit: ClassUnitData): Observable<any> {
     return this.httpClient.post<any>(this.url + '/addClassUnit', classUnit);
   }
+
+  public linkClassUnitInCourse(idCourse: Number, idClassUnit: Number): Observable<any> {
+    let newUrl = this.url + "/linkClassUnitInCourse/" + idCourse + "/" + idClassUnit;
+    return this.httpClient.post<any>(newUrl, { idCourse, idClassUnit });
+   
+  }
+
+  public getClassUnitsByIdCourse(idCourse:Number): Observable<any>{
+    return this.httpClient.get<any>(this.url+'/getClassUnitsByIdCourse/' + idCourse);
+  }
 }

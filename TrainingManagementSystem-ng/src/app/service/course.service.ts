@@ -28,7 +28,11 @@ export class CourseService {
     return this.httpClient.get<CourseData>(this.url + '/getCourse/' + id);
   }
 
-  public deleteCourse(id: number){
-    return this.httpClient.delete(this.url+'/deleteCourse/'+id);
-  } 
+  public deleteCourse(id: number) {
+    return this.httpClient.delete(this.url + '/deleteCourse/' + id);
+  }
+
+  public findAllCourseByUser(id: number): Observable<CourseData[]> {
+    return this.httpClient.get<CourseData[]>(this.url + '/findAllCourseByUser/' + id);
+  }
 }

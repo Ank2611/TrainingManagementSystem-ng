@@ -9,6 +9,6 @@ export class UserData {
     firstName: string;
     lastName: string;
     status: boolean;
-    participantRegistrationDto: ParticipantRegistrationData;
+    participantRegistrationDtos: ParticipantRegistrationData[]=[];
     userNotificationDto: UserNotificationData;
 }

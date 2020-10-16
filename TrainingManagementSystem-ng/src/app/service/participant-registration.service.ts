@@ -18,4 +18,7 @@ export class ParticipantRegistrationService {
     return this.httpClient.post<any>(this.url+'/addParticipantRegistration',participant);
   }
 
+  public deleteParticipantRegistration(id: Number){
+    return this.httpClient.delete(this.url+"/delete/"+ id);
+  }
 }

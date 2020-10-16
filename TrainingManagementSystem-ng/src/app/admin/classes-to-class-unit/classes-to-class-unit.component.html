@@ -1,0 +1,21 @@
+<div>
+    <h2>Assign classes to class unit: {{classUnit.name}}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Classes name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let classes of classesList">
+                <td><input type="radio" name="radiogroup" [value]="classes.id" (change)="onSelectionChange(classes)"></td>
+                <td>{{classes.subject}}</td>
+                <td><button (click)="addToClassUnit()">Add to class unit</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <button class="btn-add" routerLink="/admin/class-unit-list" mat-raised-button >Go back to class unit list</button>
+</div>

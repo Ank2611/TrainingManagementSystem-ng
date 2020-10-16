@@ -15,7 +15,7 @@
         <td><button mat-raised-button>Show details</button></td>
         <td><button routerLink="/edit-class-unit/{{classUnit.id}}" mat-raised-button>Edit</button></td>
         <td><button (click)="delete(classUnit.id)" mat-raised-button>Delete</button></td>
-        <td><button mat-raised-button>Asign classes</button></td>
+        <td><button routerLink="/classes-to-class-unit/{{classUnit.id}}" mat-raised-button>Asign classes</button></td>
     </tr>
 </tbody>
 </table>

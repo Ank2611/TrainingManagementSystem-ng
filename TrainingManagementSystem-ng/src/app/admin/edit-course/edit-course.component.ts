@@ -10,7 +10,7 @@ import { CourseData } from 'src/model/courseData';
 })
 export class EditCourseComponent implements OnInit {
   course: CourseData = new CourseData;
-  
+  courses: CourseData[] = [];
   constructor(private activatedRoutes: ActivatedRoute, private courseService: CourseService,
     private routes: Router) { }
 
@@ -26,8 +26,8 @@ export class EditCourseComponent implements OnInit {
     console.log(this.course);
     this.courseService.updateCourse(this.course).subscribe(result => {
       this.course = result;
+      this.routes.navigateByUrl("admin/course-list");
     })
 
-    this.routes.navigateByUrl("admin/course-list");
   }
 }
