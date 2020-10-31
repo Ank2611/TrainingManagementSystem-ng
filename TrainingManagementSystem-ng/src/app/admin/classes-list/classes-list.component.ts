@@ -10,6 +10,7 @@ import { ClassesData } from 'src/model/classesData';
 export class ClassesListComponent implements OnInit {
   classesList: ClassesData[] = [];
   classes: ClassesData;
+  
   isVisible=false;
   constructor(private classesService: ClassesService) { }
 

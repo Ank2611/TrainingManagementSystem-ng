@@ -38,8 +38,8 @@ const routes: Routes = [
   { path: 'classes-to-class-unit/:id', component: ClassesToClassUnitComponent },
   { path: 'teacher', component: TeacherComponent },
   { path: 'teacher/teacher-courses/:id', component: TeacherCoursesComponent },
-  {path:'teacher/class-unit-by-course/:id', component: ClassUnitByCourseComponent},
-  {path:'teacher/classes-by-class-unit/:id', component:ClassesByClassUnitComponent}
+  { path: 'teacher/class-unit-by-course/:id', component: ClassUnitByCourseComponent },
+  { path: 'teacher/classes-by-class-unit/:id', component: ClassesByClassUnitComponent }
 
 ];
 

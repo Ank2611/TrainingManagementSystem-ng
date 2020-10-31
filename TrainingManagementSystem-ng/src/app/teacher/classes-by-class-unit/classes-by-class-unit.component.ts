@@ -11,20 +11,22 @@ import { ClassUnitData } from 'src/model/classUnitData';
   styleUrls: ['./classes-by-class-unit.component.css']
 })
 export class ClassesByClassUnitComponent implements OnInit {
-  classes: ClassesData = new ClassesData();
+
   classesList: ClassesData[] = [];
+  classes: ClassesData = new ClassesData();
   classUnit: ClassUnitData = new ClassUnitData();
   classUnits: ClassUnitData[] = [];
   selectedClass: number;
+
   constructor(private classesService: ClassesService, private classUnitService: ClassUnitService,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    let id=this.route.snapshot.paramMap.get("id");
-    this.classUnitService.getClassUnit(Number(id)).subscribe(received=>{
-      this.classUnit=received;
+    let id = this.route.snapshot.paramMap.get("id");
+    this.classUnitService.getClassUnit(Number(id)).subscribe(received => {
+      this.classUnit = received;
     });
-    console.log("id unit" +id)
+    console.log("id unit" + id)
     this.loadClasses();
   }
 
@@ -32,7 +34,7 @@ export class ClassesByClassUnitComponent implements OnInit {
     let idClassUnit = this.route.snapshot.paramMap.get("id");
     console.log(idClassUnit);
     this.classesService.getAllByIdClassUnit(Number(idClassUnit)).subscribe(receivedClasses => {
-      this.classes = receivedClasses;
+      this.classesList = receivedClasses;
     });
   }
 

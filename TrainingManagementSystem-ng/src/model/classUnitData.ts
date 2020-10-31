@@ -5,5 +5,5 @@ export class ClassUnitData{
     id: number;
     name: string;
     coursesDto: CourseData[]=[];
-    classesDtoList: ClassesData;
+    classesDtoList: ClassesData[]=[];
 }

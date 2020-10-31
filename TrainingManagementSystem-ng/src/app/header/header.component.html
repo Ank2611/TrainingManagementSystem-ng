@@ -5,5 +5,36 @@
         <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
         <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
     </div>
+    <div class="dropdown">
+        <button class="dropbtn"> Admin
+            <i class="fa fa-fw"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="admin/teacher-list">Add Teacher</a>
+            <a href="admin/course-list">Course</a>
+            <a href="admin/class-unit-list">Class Unit</a>
+            <a href="admin/classes-list">Classes</a>
+            <a href="admin/registration-list">Accept User Registration</a>
+        </div>
+    </div>
 
+    <div class="dropdown">
+        <button class="dropbtn"> Teacher
+            <i class="fa fa-fw"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="teacher/teacher-courses/:id">Courses</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn"> User
+            <i class="fa fa-fw"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Courses</a>
+            <a href="add-registration/:id">Register to new course</a>
+
+        </div>
+    </div>
 </div>

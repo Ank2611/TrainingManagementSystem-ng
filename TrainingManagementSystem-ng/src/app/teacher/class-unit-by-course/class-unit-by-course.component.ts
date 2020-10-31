@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClassUnitService } from 'src/app/service/class-unit.service';
 import { CourseService } from 'src/app/service/course.service';
-import { ClassesData } from 'src/model/classesData';
 import { ClassUnitData } from 'src/model/classUnitData';
 import { CourseData } from 'src/model/courseData';
 
