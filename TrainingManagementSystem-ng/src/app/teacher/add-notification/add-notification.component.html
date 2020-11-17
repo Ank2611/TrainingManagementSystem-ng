@@ -1,0 +1,21 @@
+<h2>Add notification for classes: {{classes.subject}}</h2>
+<div>
+    <div class="form-add">
+        <form>
+            <mat-form-field appearance="fill">
+                <mat-label class="label">Notification subject</mat-label>
+                <input matInput placeholder="Notification subject" type="text" [(ngModel)]="notification.subject"
+                    name="classessubject">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label class="label">Notification content</mat-label>
+                <input matInput placeholder="Notification content" type="textarea" [(ngModel)]="notification.contents"
+                    name="classessubject" rows="4" cols="50">
+            </mat-form-field>
+            <br><br>
+
+            <button class="btn-add" mat-raised-button (click)="sendNotification()">Save</button>
+        </form>
+    </div>
+</div>

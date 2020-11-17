@@ -1,0 +1,21 @@
+<h2>Class units list for course: {{course.name}}</h2>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ClassUnit name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let classUnit of classUnits">
+                <!-- <td><input type="radio" name="radiogroup" [value]="classUnit.id" (change)="onSelectionChange(classUnit)"></td> -->
+                <td>{{classUnit.name}}</td>
+                <td><button mat-raised-button routerLink="/classes-by-class-unit/{{classUnit.id}}">Show classes</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+    <button class="btn-add" mat-raised-button (click)="goBack()">Go back to Courses list</button>
+</div>

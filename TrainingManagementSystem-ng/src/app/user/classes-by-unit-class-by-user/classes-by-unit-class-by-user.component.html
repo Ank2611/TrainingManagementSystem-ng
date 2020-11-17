@@ -1,17 +1,23 @@
 <div>
-    <h1>Classes for class unit: {{classUnit.name}}</h1>
+    <h2>Classes for class unit: {{classUnit.name}}</h2>
     <table>
         <thead>
             <tr>
                 <th>date</th>
                 <th>subject</th>
+                <th></th>
+
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let classes of classesList">
                 <td>{{classes.date}}</td>
                 <td>{{classes.subject}}</td>
+                <td><button routerLink="/user/notification-by-classes/{{classes.id}}" mat-raised-button>View notifications</button></td>
             </tr>
         </tbody>
     </table>
+    
+    <br><br>
+    <button class="btn-add" mat-raised-button (click)="goBack()">Go back to Class units list</button>
 </div>

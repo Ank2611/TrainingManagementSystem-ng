@@ -20,7 +20,6 @@ export class ClassesService {
     return this.httpClient.get<ClassesData>(this.url + "/getClasses/" + id);
   }
 
-
   public updateClasses(classes: ClassesData): Observable<any> {
     return this.httpClient.put<any>(this.url + '/updateClasses', classes);
   }
@@ -43,4 +42,6 @@ export class ClassesService {
   public getAllByIdClassUnit(id: Number): Observable<any> {
     return this.httpClient.get<any>(this.url + '/getAllByIdClassUnit/' + id);
   }
+
+ 
 }

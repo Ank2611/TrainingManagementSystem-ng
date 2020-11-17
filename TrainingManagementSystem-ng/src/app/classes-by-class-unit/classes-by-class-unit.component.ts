@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ClassUnitService } from 'src/app/service/class-unit.service';
-import { ClassesService } from 'src/app/service/classes.service';
-import { ClassesData } from 'src/model/classesData';
-import { ClassUnitData } from 'src/model/classUnitData';
+import { ActivatedRoute } from '@angular/router';
+import { ClassUnitService } from '../service/class-unit.service';
+import { ClassesService } from '../service/classes.service';
+import { ClassesData } from '../../model/classesData';
+import { ClassUnitData } from '../../model/classUnitData';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-classes-by-class-unit',
@@ -18,8 +19,9 @@ export class ClassesByClassUnitComponent implements OnInit {
   classUnits: ClassUnitData[] = [];
   selectedClass: number;
 
-  constructor(private classesService: ClassesService, private classUnitService: ClassUnitService,
-    private route: ActivatedRoute) { }
+  constructor(private classesService: ClassesService, 
+    private classUnitService: ClassUnitService,
+    private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get("id");
@@ -40,5 +42,12 @@ export class ClassesByClassUnitComponent implements OnInit {
 
   onSelectionChange(classes: ClassesData) {
     this.selectedClass = classes.id;
+  }
+
+ 
+
+
+  goBack(): void{
+    this.location.back();
   }
 }

@@ -1,0 +1,20 @@
+<h2>Your Class Unit, {{user.firstName}} </h2>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Class Unit name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let classUnit of classUnitByUsers">
+                <td>{{classUnit.classUnitName}}</td>
+                <td><button routerLink="/user/classes-by-unit-class-by-user/{{classUnit.idClassUnit}}" mat-raised-button>View classes</button></td>
+            </tr>
+        </tbody>
+    </table>
+   <br><br>
+   
+  
+</div>

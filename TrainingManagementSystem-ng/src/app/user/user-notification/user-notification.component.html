@@ -1,0 +1,24 @@
+<div>
+    <h1>This is your notification: {{user.firstName}}</h1>
+
+    <div>
+        <h1>You have {{unreadNotificationData.length}} new notification!</h1>
+    </div>
+    <div class="notific"> List of unread notifications
+        <ol *ngFor="let unread of unreadNotificationData">
+            <li> <a href="">{{unread.subject}}</a> </li>
+            <li><button mat-raised-button (click)="showDiv(unread.id)">Read notification</button></li>
+
+            <div class="contents" *ngIf="isDivVisible">
+                <p>{{unread.contents}}</p>
+            </div>
+        </ol>
+    </div>
+
+    <div class="notific" *ngIf="readNotificationData.length>0"> List of read notifications
+        <ol *ngFor="let read of readNotificationData">
+            <li> <a href="">{{read.subject}}</a> </li>
+        </ol>
+    </div>
+
+</div>

@@ -9,3 +9,13 @@ h1{
 .container{
     margin-top: 85px;
 }
+
+.img{
+    margin-top: 20px;
+   text-align: center;
+}
+
+img{
+    width: 70%;
+    height:350px;
+}

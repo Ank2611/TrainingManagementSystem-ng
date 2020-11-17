@@ -1,0 +1,17 @@
+.notific{
+    margin-left: 80px;
+    font-weight: bolder;
+    font-size: medium;
+    width: 50%;
+}
+
+ol{
+    font-weight: normal;
+}
+
+.contents{
+    width: 50%;
+    margin-left: auto;
+    display: inline;
+    color: brown;
+}

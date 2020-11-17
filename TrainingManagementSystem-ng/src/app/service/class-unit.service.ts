@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { ClassUnitData } from "../../model/classUnitData";
+import { ClassUnitByUserData } from 'src/model/classUnitByUserData';
 
 @Injectable({
   providedIn: 'root'
@@ -35,10 +36,14 @@ export class ClassUnitService {
   public linkClassUnitInCourse(idCourse: Number, idClassUnit: Number): Observable<any> {
     let newUrl = this.url + "/linkClassUnitInCourse/" + idCourse + "/" + idClassUnit;
     return this.httpClient.post<any>(newUrl, { idCourse, idClassUnit });
-   
+
   }
 
-  public getClassUnitsByIdCourse(idCourse:Number): Observable<any>{
-    return this.httpClient.get<any>(this.url+'/getClassUnitsByIdCourse/' + idCourse);
+  public getClassUnitsByIdCourse(idCourse: Number): Observable<any> {
+    return this.httpClient.get<any>(this.url + '/getClassUnitsByIdCourse/' + idCourse);
+  }
+
+  public getAllClassUnitByUser(idUser: Number): Observable<ClassUnitByUserData[]> {
+    return this.httpClient.get<ClassUnitByUserData[]>(this.url + '/getAllClassUnitByUser/' + idUser);
   }
 }

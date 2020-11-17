@@ -16,8 +16,8 @@ export class EditUserComponent implements OnInit {
   ngOnInit(): void {
     let id = this.activeRoute.snapshot.paramMap.get("id");
     console.log('id '+id);
-    this.userService.getUser(Number(id)).subscribe(userUesult=>{
-      this.user=userUesult;
+    this.userService.getUser(Number(id)).subscribe(userResult=>{
+      this.user=userResult;
     })
   }
 

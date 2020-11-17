@@ -12,7 +12,7 @@
             <tr *ngFor="let classUnit of classUnits">
                 <td><input type="radio" name="radiogroup" [value]="classUnit.id" (change)="onSelectionChange(classUnit)"></td>
                 <td>{{classUnit.name}}</td>
-                <td><button (click)="addToCourse()">Add to course</button></td>
+                <td><button mat-raised-button (click)="addToCourse()">Add to course</button></td>
             </tr>
         </tbody>
     </table>

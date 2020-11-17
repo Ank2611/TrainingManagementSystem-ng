@@ -39,8 +39,15 @@ import { ClassesListComponent } from './admin/classes-list/classes-list.componen
 import { EditClassesComponent } from './admin/edit-classes/edit-classes.component';
 import { TeacherCoursesComponent } from './teacher/teacher-courses/teacher-courses.component';
 import { TeacherComponent } from './teacher/teacher/teacher.component';
-import { ClassUnitByCourseComponent } from './teacher/class-unit-by-course/class-unit-by-course.component';
-import { ClassesByClassUnitComponent } from './teacher/classes-by-class-unit/classes-by-class-unit.component';
+import { ClassUnitByCourseComponent } from './class-unit-by-course/class-unit-by-course.component';
+import { ClassesByClassUnitComponent } from './classes-by-class-unit/classes-by-class-unit.component';
+import { UserClassesCalendarComponent } from './user/user-classes-calendar/user-classes-calendar.component';
+import { UserNotificationComponent } from './user/user-notification/user-notification.component';
+import { UserClassUnitComponent } from './user/user-class-unit/user-class-unit.component';
+import { UserComponent } from './user/user/user.component';
+import { AddNotificationComponent } from './teacher/add-notification/add-notification.component';
+import { ClassesByUnitClassByUserComponent } from './user/classes-by-unit-class-by-user/classes-by-unit-class-by-user.component';
+import { NotificationByClassesComponent } from './user/notification-by-classes/notification-by-classes.component';
 
 
 @NgModule({
@@ -65,7 +72,14 @@ import { ClassesByClassUnitComponent } from './teacher/classes-by-class-unit/cla
     TeacherCoursesComponent,
     TeacherComponent,
     ClassUnitByCourseComponent,
-    ClassesByClassUnitComponent
+    ClassesByClassUnitComponent,
+    UserClassesCalendarComponent,
+    UserNotificationComponent,
+    UserClassUnitComponent,
+    UserComponent,
+    AddNotificationComponent,
+    ClassesByUnitClassByUserComponent,
+    NotificationByClassesComponent
 
   ],
   imports: [

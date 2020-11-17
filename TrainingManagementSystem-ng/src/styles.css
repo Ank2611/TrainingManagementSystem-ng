@@ -3,7 +3,17 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
 
+h1{
+  text-align: center;
+  margin-top: 20px;
+}
 
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
 
 table {
     width: 80%;

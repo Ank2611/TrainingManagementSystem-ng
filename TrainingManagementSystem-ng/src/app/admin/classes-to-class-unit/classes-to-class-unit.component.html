@@ -3,16 +3,15 @@
     <table>
         <thead>
             <tr>
-                <th></th>
+                <!-- <th></th> -->
                 <th>Classes name</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let classes of classesList">
-                <td><input type="radio" name="radiogroup" [value]="classes.id" (change)="onSelectionChange(classes)"></td>
                 <td>{{classes.subject}}</td>
-                <td><button (click)="addToClassUnit()">Add to class unit</button></td>
+                <td><button mat-raised-button (click)="addToClassUnit()">Add to class unit</button></td>
             </tr>
         </tbody>
     </table>

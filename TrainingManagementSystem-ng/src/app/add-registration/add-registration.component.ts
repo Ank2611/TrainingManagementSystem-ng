@@ -49,7 +49,7 @@ export class AddRegistrationComponent implements OnInit {
     this.participant.userDto.id=Number(idUser);
     
     this.participant.date=new Date();
-    this.participant.accepted=true;
+    this.participant.accepted=false;
     console.log('user id ' + this.participant.userDto.id);
     console.log('course id ' + this.participant.courseDto.id);
     this.participantRegistrationService.addParticipantRegistration(this.participant).subscribe(received=>{

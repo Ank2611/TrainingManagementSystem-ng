@@ -17,8 +17,15 @@ import { ClassesListComponent } from './admin/classes-list/classes-list.componen
 import { EditClassesComponent } from './admin/edit-classes/edit-classes.component';
 import { TeacherCoursesComponent } from './teacher/teacher-courses/teacher-courses.component';
 import { TeacherComponent } from "./teacher/teacher/teacher.component";
-import { ClassUnitByCourseComponent } from './teacher/class-unit-by-course/class-unit-by-course.component';
-import { ClassesByClassUnitComponent } from './teacher/classes-by-class-unit/classes-by-class-unit.component';
+import { ClassUnitByCourseComponent } from './class-unit-by-course/class-unit-by-course.component';
+import { ClassesByClassUnitComponent } from './classes-by-class-unit/classes-by-class-unit.component';
+import { UserClassUnitComponent } from './user/user-class-unit/user-class-unit.component';
+import { UserClassesCalendarComponent } from './user/user-classes-calendar/user-classes-calendar.component';
+import { UserNotificationComponent } from './user/user-notification/user-notification.component';
+import { AddNotificationComponent } from './teacher/add-notification/add-notification.component';
+import { ClassesByUnitClassByUserComponent } from './user/classes-by-unit-class-by-user/classes-by-unit-class-by-user.component';
+import { NotificationByClassesComponent } from './user/notification-by-classes/notification-by-classes.component';
+
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
@@ -26,6 +33,7 @@ const routes: Routes = [
   { path: 'admin/teacher-list', component: TeacherListComponent },
   { path: 'admin/add-teacher', component: AddTeacherComponent },
   { path: 'admin/course-list', component: CourseListComponent },
+  { path: 'class-unit-by-course/:id', component: ClassUnitByCourseComponent },
   { path: 'edit-course/:id', component: EditCourseComponent },
   { path: 'admin/class-unit-list', component: ClassUnitListComponent },
   { path: 'edit-class-unit/:id', component: EditClassUnitComponent },
@@ -38,9 +46,13 @@ const routes: Routes = [
   { path: 'classes-to-class-unit/:id', component: ClassesToClassUnitComponent },
   { path: 'teacher', component: TeacherComponent },
   { path: 'teacher/teacher-courses/:id', component: TeacherCoursesComponent },
-  { path: 'teacher/class-unit-by-course/:id', component: ClassUnitByCourseComponent },
-  { path: 'teacher/classes-by-class-unit/:id', component: ClassesByClassUnitComponent }
-
+  { path: 'teacher/add-notification/:id', component: AddNotificationComponent },
+  { path: 'classes-by-class-unit/:id', component: ClassesByClassUnitComponent },
+  { path: 'user/user-class-unit/:id', component: UserClassUnitComponent },
+  { path: 'user/user-classes-calendar/:id', component: UserClassesCalendarComponent },
+  { path: 'user/user-notification/:id', component: UserNotificationComponent },
+  { path: 'user/classes-by-unit-class-by-user/:id', component: ClassesByUnitClassByUserComponent },
+  { path: 'user/notification-by-classes/:id', component: NotificationByClassesComponent }
 ];
 
 @NgModule({

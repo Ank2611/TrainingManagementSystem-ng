@@ -1,0 +1,22 @@
+<div>
+    <h2>Notification for classes: {{classes.subject}} </h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let notificationByClasses of notificationByClassesList">
+                <td>{{notificationByClasses.notification_subject}}</td>
+                <td>{{notificationByClasses.notification_contents}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <button class="btn-add" mat-raised-button (click)="goBack()">Go back to Classes list</button>
+</div>
+
+
